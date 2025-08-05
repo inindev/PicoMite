@@ -176,6 +176,7 @@ endif()
 pico_enable_stdio_uart(PicoMite 0)
 pico_add_extra_outputs(PicoMite)
 pico_set_printf_implementation(PicoMite compiler)
+set_target_properties(PicoMite PROPERTIES OUTPUT_NAME "PicoMite_${COMPILE}")
 
 if(COMPILE MATCHES "VGARP2350|WEBRP2350|PICORP2350|HDMI|HDMIUSB|VGAUSBRP2350|PICOUSBRP2350")
     pico_set_float_implementation(PicoMite pico_dcp)
